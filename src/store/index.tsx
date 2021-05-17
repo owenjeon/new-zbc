@@ -1,8 +1,10 @@
 import React from "react";
+import ItemStore from "./item/itemStore";
 import UiStore from "./ui/uiStore";
 
 const rootStore = {
-  uiStore: new UiStore()
+  uiStore: new UiStore(),
+  itemStore: new ItemStore(),
 };
 
 export type RootStore = typeof rootStore;

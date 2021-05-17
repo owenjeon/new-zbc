@@ -5,15 +5,12 @@ import useUiStore from "../../../store/ui/uiHook";
 
 const Item = observer(() => {
   const uiStore = useUiStore();
-  const {
-    itemStore: { item, fullAddress },
-    pyeong
-  } = useDetailStore();
+  const { item, pyeong } = useDetailStore();
   if (!item) return null;
   return (
     <>
       <div>service_type: {item.service_type}</div>
-      <div>{fullAddress}</div>
+      <div>{item.fullAddress}</div>
       <div>면적 타입: {pyeong} </div>
       <div>
         <button onClick={() => uiStore.togglePyeong()}>면적 토클</button>

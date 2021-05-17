@@ -8,10 +8,10 @@ import { useRootStore } from "../../../store";
 
 const DetailScreen = ({ id }: { id: string }) => {
   const rootStore = useRootStore();
-  const store = React.useRef(new DetailScreenModel(rootStore));
+  const store = React.useRef(new DetailScreenModel(rootStore, id));
 
   React.useEffect(() => {
-    store.current.fetchItem(id);
+    store.current.fetchItem();
   }, []);
   return (
     <DetailProvider value={store.current}>
