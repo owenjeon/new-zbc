@@ -21,7 +21,7 @@ export default class AgentStore {
   }
 
   get agentTitle() {
-    if (!this._agent) return;
+    if (!this._agent) return undefined;
     return `중개사: ${this._agent.agent_name} (${this._agent.user_name})`;
   }
 }

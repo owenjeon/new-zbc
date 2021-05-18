@@ -3,12 +3,10 @@ import React from "react";
 import { useDetailStore } from "../context";
 
 const Agent = observer(() => {
-  const {
-    agentStore: { agentTitle }
-  } = useDetailStore();
+  const { agent } = useDetailStore();
 
-  if (!agentTitle) return null;
-  return <div>{agentTitle}</div>;
+  if (!agent) return null;
+  return <div>{agent.title}</div>;
 });
 
 export default Agent;

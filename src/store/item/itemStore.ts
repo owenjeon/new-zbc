@@ -16,13 +16,8 @@ export default class ItemStore {
     this._item[key] = item;
   }
 
-  getItem(key: ItemKey): Item | undefined {
-    const item = this._item[key];
-    if(!item) return
-    return {...item, fullAddress: this.getFullAddress(item)}
+  getItem(key: ItemKey) {
+    return this._item[key];
   }
 
-  getFullAddress(item: Item) {
-    return `${item.local1} ${item.local2} ${item.local3} ${item.jibunAddress}`;
-  }
 }
