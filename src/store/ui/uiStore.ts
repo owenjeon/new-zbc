@@ -13,7 +13,7 @@ export default class UiStore {
     );
   }
 
-  togglePyeong() {
+  togglePyeong = () => {
     this.isPyeong = !this.isPyeong;
   }
 }
